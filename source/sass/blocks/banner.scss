@@ -1,0 +1,89 @@
+.banner {
+  background-image: url("../img/promo_background.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+  }
+}
+
+.banner__button {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    width: 244px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.banner__wrapper {
+  color: $basic_white;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    padding-left: 112px;
+    color: $basic_black;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    padding-left: 190px;
+  }
+}
+
+.banner__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  margin-bottom: 25px;
+  padding-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding-right: 150px;
+    margin-bottom: 41px;
+    padding-top: 0;
+  }
+}
+
+.banner__slogan {
+  display: inline-flex;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  z-index: 1;
+  font-size: 20px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 300px;
+    margin-bottom: 49px;
+  }
+}
+
+.banner__image {
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 500px;
+  }
+}

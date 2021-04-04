@@ -1,0 +1,25 @@
+.page-main {
+  @media (min-width: $desktop-width) {
+    &__banner {
+      margin-bottom: 82px;
+    }
+  }
+
+  &__programs,
+  &__features {
+    margin-bottom: 22px;
+  }
+}
+
+.page-main__banner {
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding: 70px 0 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 70px 0 432px;
+  }
+}

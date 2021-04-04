@@ -1,0 +1,30 @@
+.copyright__link {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright__text {
+  margin: 0;
+  padding: 0;
+  padding-top: 28px;
+  font-family: $custom-font;
+  font-size: 16px;
+  color: $basic_black;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.copyright__logo {
+  margin: 0;
+  padding: 0;
+  padding-top: 22px;
+  box-sizing: content-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}

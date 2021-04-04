@@ -1,0 +1,54 @@
+.location {
+  position: relative;
+  background-color: $basic_grey;
+}
+
+.location__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  background-color: $basic_white;
+
+  &--form {
+    background-color: inherit;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+    padding-bottom: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 35%;
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    padding: 66px 76px;
+    background-color: $basic-white;
+  }
+}
+
+.location__invite {
+  width: 140px;
+  text-transform: uppercase;
+  font-size: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+  }
+}
+
+.location__address {
+  width: 140px;
+  line-height: 20px;
+  font-family: $custom-font;
+
+  @media (min-width: $tablet-width) {
+    width: 160px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}

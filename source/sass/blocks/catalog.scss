@@ -1,0 +1,18 @@
+.catalog {
+  &__item {
+    border-top: 1px solid $basic_grey_3;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+      background-color: $basic_grey;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $basic_grey_3;
+
+      @media (min-width: $tablet-width) {
+        border: 2px solid $basic_grey;
+      }
+    }
+  }
+}

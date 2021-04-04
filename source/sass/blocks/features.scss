@@ -1,0 +1,88 @@
+.features__title {
+  margin: 0;
+  margin-bottom: 38px;
+  padding: 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+.features__list {
+  @include list-reset;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+  }
+}
+
+.features__item {
+  display: flex;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $basic_green;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 0;
+      margin-bottom: 30px;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &--nutrient::before {
+    background-image: url("../img/icon_leaf.svg");
+    background-size: 30px 32px;
+  }
+
+  &--powder::before {
+    background-image: url("../img/icon_tub.svg");
+    background-size: 29px 31px;
+  }
+
+  &--food::before {
+    background-image: url("../img/icon_eat.svg");
+    background-size: 25px 30px;
+  }
+
+  &--time::before {
+    background-image: url("../img/icon_alarm.svg");
+    background-size: 32px 33px;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
+}
+
+.features__desc {
+  max-width: 200px;
+  margin: 0;
+  font-family: $custom-font;
+  font-size: 14px;
+  line-height: 18px;
+}
