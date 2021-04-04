@@ -1,0 +1,62 @@
+.controls {
+  width: inherit;
+  position: relative;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  height: 42px;
+  background-color: transparent;
+}
+
+.controls__scale {
+  position: relative;
+  margin: 0 96px;
+  height: 14px;
+  background-color: $basic-white;
+  border-radius: 6px;
+  border: 1px solid $special_grey;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 120px;
+    height: 6px;
+    border: none;
+    background-color: $special_grey_4;
+  }
+}
+
+.controls__bar {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 6px;
+  position: absolute;
+  height: 6px;
+  width: 36px;
+  border-radius: 6px;
+  background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    height: 34px;
+    width: 34px;
+    background-color: $special_grey_4;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.controls__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.controls__button--before {
+  left: -50px;
+}
+
+.controls__button--after {
+  right: -50px;
+}
