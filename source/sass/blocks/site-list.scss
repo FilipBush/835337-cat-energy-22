@@ -5,6 +5,7 @@
 
   &:first-child {
     border-top: 1px $basic_grey_3 solid;
+
     @media (min-width: $tablet-width) {
       border: none;
     }
