@@ -21,6 +21,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    position: relative;
     padding: 77px 27px 53px 52px;
   }
 
@@ -45,18 +46,21 @@
     font-size: 36px;
     line-height: 36px;
   }
+}
 
-  &::before {
-    position: absolute;
+.program__title::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 67px;
+  height: 53px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  @media (max-width: $mobile-width-only) {
     top: 21px;
     left: 13px;
-    content: "";
-    display: block;
-    width: 67px;
-    height: 53px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center bottom;
   }
 }
 
@@ -65,7 +69,10 @@
   background-image: url("../img/logo_program_slim.svg");
 
   @media (min-width: $tablet-width) {
-    background-image: none;
+    top: 81px;
+    right: 61px;
+    width: 200px;
+    height: 211px;
   }
 }
 
@@ -79,7 +86,10 @@
   background-image: url("../img/logo_program_gain.svg");
 
   @media (min-width: $tablet-width) {
-    background-image: none;
+    top: 91px;
+    right: 27px;
+    width: 268px;
+    height: 200px;
   }
 }
 

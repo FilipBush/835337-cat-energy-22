@@ -28,6 +28,13 @@
   margin-bottom: 20px;
   padding: 0;
 
+  @media (min-width: $tablet-width) {
+    min-height: 235px;
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -50,24 +57,48 @@
     }
   }
 
-  &--nutrient::before {
-    background-image: url("../img/icon_leaf.svg");
-    background-size: 30px 32px;
+  &--nutrient {
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/number-1.svg");
+    }
+
+    &::before {
+      background-image: url("../img/icon_leaf.svg");
+      background-size: 30px 32px;
+    }
   }
 
-  &--powder::before {
-    background-image: url("../img/icon_tub.svg");
-    background-size: 29px 31px;
+  &--powder {
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/number-2.svg");
+    }
+
+    &::before {
+        background-image: url("../img/icon_tub.svg");
+        background-size: 29px 31px;
+      }
   }
 
-  &--food::before {
-    background-image: url("../img/icon_eat.svg");
-    background-size: 25px 30px;
+  &--food {
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/number-3.svg");
+    }
+
+    &::before {
+      background-image: url("../img/icon_eat.svg");
+      background-size: 25px 30px;
+    }
   }
 
-  &--time::before {
-    background-image: url("../img/icon_alarm.svg");
-    background-size: 32px 33px;
+  &--time {
+    @media (min-width: $tablet-width) {
+      background-image: url("../img/number-4.svg");
+    }
+
+    &::before {
+      background-image: url("../img/icon_alarm.svg");
+      background-size: 32px 33px;
+    }
   }
 
   @media (min-width: $tablet-width) {
