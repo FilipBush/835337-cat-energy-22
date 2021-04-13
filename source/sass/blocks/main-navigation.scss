@@ -33,7 +33,7 @@
   content: "";
   position: absolute;
   top: -38px;
-  right: 0px;
+  right: 0;
   width: 24px;
   height: 16px;
   background-color: transparent;
@@ -48,7 +48,7 @@
 .main-navigation--closed .main-navigation__toggle::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 10px;
   width: 24px;
   height: 2px;
@@ -57,13 +57,12 @@
 }
 
 .main-navigation--opened .main-navigation__toggle {
-
   &::before,
   &::after {
     content: "";
     position: absolute;
     top: 7px;
-    left: 0px;
+    left: 0;
     width: 25px;
     height: 2px;
     background-color: $basic_black;

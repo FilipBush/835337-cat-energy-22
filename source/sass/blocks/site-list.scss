@@ -13,6 +13,7 @@
 
   &:first-child {
     border-top: 1px $basic_grey_3 solid;
+
     @media (min-width: $tablet-width) {
       border-top: none;
     }
@@ -28,10 +29,12 @@
     @media (min-width: $tablet-width) {
       border-bottom: 2px solid $basic_green;
     }
+
+    @media (min-width: $desktop-width) {
+      border-bottom: 2px solid $basic_white;
+    }
   }
 }
-
-
 
 .site-list__item a {
   color: $basic_black;
