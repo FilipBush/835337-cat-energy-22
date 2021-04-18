@@ -1,4 +1,5 @@
 .main-navigation {
+  position: relative;
   list-style-type: none;
   text-transform: uppercase;
   font-size: 20px;
@@ -23,5 +24,56 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+
+.main-navigation__toggle {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -38px;
+  right: 0;
+  width: 24px;
+  height: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation--closed .main-navigation__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 24px;
+  height: 2px;
+  background-color: $basic_black;
+  box-shadow: 0 8px 0 0 $basic_black, 0 16px 0 0 $basic_black;
+}
+
+.main-navigation--opened .main-navigation__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: $basic_black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }

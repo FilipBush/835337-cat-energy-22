@@ -5,15 +5,22 @@
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 72px;
+  }
 }
 
 .features__list {
   @include list-reset;
+  counter-reset: features;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    gap: 85px 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -23,10 +30,18 @@
 }
 
 .features__item {
+  position: relative;
   display: flex;
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    min-height: 235px;
+    margin-bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -50,24 +65,32 @@
     }
   }
 
-  &--nutrient::before {
-    background-image: url("../img/icon_leaf.svg");
-    background-size: 30px 32px;
+  &--nutrient {
+    &::before {
+      background-image: url("../img/icon_leaf.svg");
+      background-size: 30px 32px;
+    }
   }
 
-  &--powder::before {
-    background-image: url("../img/icon_tub.svg");
-    background-size: 29px 31px;
+  &--powder {
+    &::before {
+      background-image: url("../img/icon_tub.svg");
+      background-size: 29px 31px;
+    }
   }
 
-  &--food::before {
-    background-image: url("../img/icon_eat.svg");
-    background-size: 25px 30px;
+  &--food {
+    &::before {
+      background-image: url("../img/icon_eat.svg");
+      background-size: 25px 30px;
+    }
   }
 
-  &--time::before {
-    background-image: url("../img/icon_alarm.svg");
-    background-size: 32px 33px;
+  &--time {
+    &::before {
+      background-image: url("../img/icon_alarm.svg");
+      background-size: 32px 33px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -77,6 +100,25 @@
   @media (min-width: $desktop-width) {
     width: 245px;
   }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      flex-direction: column;
+      position: absolute;
+      content: counter(features);
+      counter-increment: features;
+      font-size: 280px;
+      color: $basic_grey;
+      z-index: -1;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: $desktop-width) {
+      transform: translateX(-4px);
+    }
+  }
 }
 
 .features__desc {
@@ -85,4 +127,10 @@
   font-family: $custom-font;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 245px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

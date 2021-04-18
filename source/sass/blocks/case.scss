@@ -4,13 +4,20 @@
   padding-bottom: 27px;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient($basic-white 50%, $basic-grey_5 50% 100%);
+    padding-top: 55px;
+    background: linear-gradient($basic-white 60%, $basic-grey_5 40% 100%);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: linear-gradient($basic-white 30%, $basic-grey_5 20% 100%);
+    padding-bottom: 67px;
   }
 }
 
 .case__demo {
   @media (min-width: $tablet-width) {
     text-align: center;
+    width: 100%;
   }
 
   @media (min-width: $desktop-width) {
@@ -20,6 +27,11 @@
 }
 
 .case__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-rows: repeat(4, auto);
@@ -33,14 +45,25 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 63px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .case__desc {
   padding: 0;
   margin: 0;
+  margin-bottom: 25px;
   font-family: $custom-font;
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
@@ -48,15 +71,39 @@
 }
 
 .case__cost {
-  display: inline-flex;
+  display: block;
   margin-bottom: 42px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    font-size: 20px;
+    max-width: 175px;
+    padding-top: 11px;
+    margin-left: auto;
+  }
 
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
+    flex-direction: row;
+    max-width: 327px;
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 
 .case__result {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 366px;
+  }
+
   @media (min-width: $desktop-width) {
     grid-column: 1 / 2;
   }
