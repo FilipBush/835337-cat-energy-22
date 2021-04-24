@@ -8,29 +8,29 @@
   </head>
   <body class="page__body">
 
-    <header class="page-header container">
-        <a class="page-header__logo" href="index.html">
-          <img class="page-header__mascot" src="img/logo_mobile.svg" width="34" height="38" alt="маскот CAT ENERGY">
-          <img src="img/logo_footer.svg" width="101" height="18" alt="Питание CAT ENERGY">
-        </a>
-        <button type="button" class="button page-header__toggle">
+    <header class="page-header container--index">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__mascot" src="img/logo_mobile.svg" width="34" height="38" alt="маскот CAT ENERGY">
+        <img src="img/logo_footer.svg" width="101" height="18" alt="Питание CAT ENERGY">
+      </a>
+      <nav class="main-navigation main-navigation--closed">
+        <button type="button" class="button main-navigation__toggle">
           <span class="visually-hidden">
             Открыть/закрыть меню
           </span>
         </button>
-      <nav class="main-navigation">
         <ul class="main-navigation__list site-list">
-          <li class="site-list__item site-list__item--active site-list__item--form">
+          <li class="site-list__item">
             <a href="#">
               Главная
             </a>
           </li>
-          <li class="site-list__item site-list__item--form">
+          <li class="site-list__item">
             <a href="catalog.html">
               Каталог продукции
             </a>
           </li>
-          <li class="site-list__item site-list__item--form">
+          <li class="site-list__item site-list__item--active">
             <a href="form.html">
               Подбор программы
             </a>
@@ -62,7 +62,7 @@
                   <input class="field-text__input" type="text" name="cat-weight" id="cat-weight" placeholder="7">
                 </li>
                 <li class="form__field field-text">
-                  <label class="field-text__label" for="cat-age">Возраст(кг):*</label>
+                  <label class="field-text__label" for="cat-age">Возраст(лет):*</label>
                   <input class="field-text__input" type="text" name="cat-age" id="cat-age" placeholder="7">
                 </li>
               </ul>
@@ -74,28 +74,34 @@
               </legend>
               <ul class="form__group form__group--radio">
                 <li class="form__field field-radio">
-                  <input class="field-radio__control" type="radio" id="slim" value="slim">
-                  <label class="field-radio__label" for="slim">Похудение</label>
+                  <input class="field-radio__control" type="radio" id="slim" value="slim" name="plan">
+                  <label class="field-radio__label" for="slim">
+                    <span class="field-radio__title">Похудение</span>
+                  </label>
                 </li>
                 <li class="form__field field-radio">
-                  <input class="field-radio__control" type="radio" id="gain" value="gain" checked>
-                  <label class="field-radio__label" for="gain">Набор массы</label>
+                  <input class="field-radio__control" type="radio" id="gain" value="gain" name="plan" checked>
+                  <label class="field-radio__label" for="gain">
+                    <span class="field-radio__title">Набор массы</span>
+                  </label>
                 </li>
                 <li class="form__field field-radio">
-                  <input class="field-radio__control" type="radio" id="goal3" value="advice">
-                  <label class="field-radio__label" for="goal3">Не знаю (Нужен ваш совет)</label>
+                  <input class="field-radio__control" type="radio" id="goal3" value="advice" name="plan" disabled>
+                  <label class="field-radio__label" for="goal3">
+                    <span class="field-radio__title"></span>Не знаю (Нужен ваш совет)
+                  </label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="form__item form__item--contacts">
-              <p class="form__title">
+              <p class="form__title form__title--contacts">
                 Контактные данные (владельца кота)
               </p>
               <ul class="form__group form__group--contacts">
                 <li class="form__field field-text">
                   <label class="field-text__label field-text__label--email" for="e-mail">E&#8209mail:*</label>
-                  <input class="field-text__input field-text__input--tel" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com">
+                  <input class="field-text__input field-text__input--email" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com">
                 </li>
                 <li class="form__field field-text">
                   <label class="field-text__label field-text__label--email" for="tel">Телефон:*</label>
@@ -104,8 +110,8 @@
               </ul>
             </fieldset>
 
-            <fieldset class="form__item">
-              <p class="form__title">
+            <fieldset class="form__item form__item--comments">
+              <p class="form__title form__title--comments">
                 Комментарий
               </p>
               <label class="visually-hidden" for="comment">
@@ -114,13 +120,13 @@
               <textarea class="form__field field-text field-text--area" id="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
 
-            <fieldset class="form__item addition">
+            <fieldset class="form__item form__item--addition">
               <p class="form__title form__title--addition">
                 Дополнительно
               </p>
               <ul class="form__group form__group--checkbox">
                 <li class="form__field checkbox">
-                  <input class="visually-hidden checkbox__input" type="checkbox" name="sweetener" id="sweetener" checked>
+                  <input checked class="visually-hidden checkbox__input" type="checkbox" name="sweetener" id="sweetener" checked>
                   <label class="checkbox__label" for="sweetener">Сахарозаменитель</label>
                 </li>
                 <li class="form__field checkbox">
@@ -132,7 +138,7 @@
                   <label class="checkbox__label" for="milk">Молоко</label>
                 </li>
                 <li class="form__field checkbox">
-                  <input class="visually-hidden checkbox__input" type="checkbox" name="vitamin" id="vitamin">
+                  <input disabled checked class="visually-hidden checkbox__input" type="checkbox" name="vitamin" id="vitamin">
                   <label class="checkbox__label" for="vitamin">Витамины</label>
                 </li>
               </ul>

@@ -29,16 +29,14 @@
     @media (min-width: $tablet-width) {
       border-bottom: 2px solid $basic_green;
     }
-
-    @media (min-width: $desktop-width) {
-      border-bottom: 2px solid $basic_white;
-    }
   }
 }
 
 .site-list__item a {
   color: $basic_black;
+}
 
+.site-list__item--index a {
   @media (min-width: $desktop-width) {
     color: $basic_white;
   }

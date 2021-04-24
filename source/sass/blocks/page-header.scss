@@ -20,6 +20,10 @@
       padding-left: 35px;
       margin-right: 80px;
     }
+
+    @media (min-width: $tablet-width) {
+      margin-right: auto;
+    }
   }
 
   &__mascot {
