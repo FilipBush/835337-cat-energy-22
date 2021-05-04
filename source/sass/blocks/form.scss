@@ -10,7 +10,6 @@
 
   &--contacts,
   &--comments {
-
     @media (min-width: $desktop-width) {
       flex-grow: 1;
     }
@@ -18,6 +17,19 @@
 
   &--addition {
     margin-bottom: 34px;
+    position: relative;
+
+    &::before {
+      @include line-pseudo-50vw($basic_green, 14px, 2px);
+    }
+
+    @media (min-width: $tablet-width) {
+      &::before {
+        @media (min-width: $tablet-width) {
+          @include line-pseudo-100vw($basic_green, 23px, 2px);
+        }
+      }
+    }
 
     @media (min-width: $tablet-width) {
       margin-bottom: 35px;
@@ -87,7 +99,7 @@
   position: relative;
 
   &::before {
-    @include line-pseudo-50vw($basic_green, 38px, 2px)
+    @include line-pseudo-50vw($basic_green, 38px, 2px);
   }
 
   @media (min-width: $tablet-width) {
@@ -95,7 +107,7 @@
 
     &::before {
       @media (min-width: $tablet-width) {
-        @include line-pseudo-100vw($basic_green, 46px, 2px)
+        @include line-pseudo-100vw($basic_green, 46px, 2px);
       }
     }
   }
@@ -106,7 +118,7 @@
   margin-bottom: 23px;
 
   &::before {
-    @include line-pseudo-50vw($basic_green, 14px, 2px)
+    @include line-pseudo-50vw($basic_green, 14px, 2px);
   }
 
   @media (min-width: $tablet-width) {
@@ -114,23 +126,7 @@
 
     &::before {
       @media (min-width: $tablet-width) {
-        @include line-pseudo-100vw($basic_green, 23px, 2px)
-      }
-    }
-  }
-}
-
-.form__item--addition {
-  position: relative;
-
-  &::before {
-    @include line-pseudo-50vw($basic_green, 14px, 2px)
-  }
-
-  @media (min-width: $tablet-width) {
-    &::before {
-      @media (min-width: $tablet-width) {
-        @include line-pseudo-100vw($basic_green, 23px, 2px)
+        @include line-pseudo-100vw($basic_green, 23px, 2px);
       }
     }
   }
