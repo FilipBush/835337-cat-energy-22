@@ -1,23 +1,15 @@
 .form__item {
-  margin: 0 -20px;
-  padding: 0 20px;
+  margin: 0;
+  padding: 0;
   border: none;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
-    margin: 0 -71px;
-    padding: 0 71px;
-  }
-
   @media (min-width: $desktop-width) {
-    margin: 0 -110px;
-    padding: 0 110px;
     width: 100%;
   }
 
   &--contacts,
   &--comments {
-    background: linear-gradient(transparent 0 15px, $basic_green 15px 17px, transparent 17px 100%);
 
     @media (min-width: $desktop-width) {
       flex-grow: 1;
@@ -25,14 +17,10 @@
   }
 
   &--addition {
-    padding-top: 23px;
-    padding-bottom: 34px;
-    background: linear-gradient(transparent 0 35px, $basic_green 35px 37px, transparent 37px 100%);
+    margin-bottom: 34px;
 
     @media (min-width: $tablet-width) {
-      padding-top: 65px;
-      padding-bottom: 35px;
-      background: linear-gradient(transparent 0 88px, #68b738 88px 90px, transparent 90px 100%);
+      margin-bottom: 35px;
     }
 
     @media (min-width: $desktop-width) {
@@ -46,23 +34,22 @@
 }
 
 .form__item--bio {
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 72px;
+    margin-bottom: 72px;
   }
 
   @media (min-width: $desktop-width) {
-    flex-grow: 1;
     width: calc(50% - 40px);
+    margin-bottom: 0;
   }
 }
 
 .form__item--plan {
-  padding: 20px 20px;
-  margin: 0 -20px 23px;
-  border-bottom: 1px $special_grey_3 solid;
-  border-top: 1px $special_grey_3 solid;
+  padding: 20px 0;
+  margin: 0;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding: 25px 28px;
@@ -71,10 +58,81 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 75px;
-    margin-bottom: 69px;
+    margin: 0;
+    padding: 23px 28px;
     width: calc(50% - 40px);
     border: 1px $special_grey_3 solid;
+  }
+
+  &::before {
+    @include line-pseudo-100vw($special_grey_3);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    @include line-pseudo-100vw($special_grey_3, 100%);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.form__item--contacts {
+  padding-top: 23px;
+  margin-bottom: 24px;
+  position: relative;
+
+  &::before {
+    @include line-pseudo-50vw($basic_green, 38px, 2px)
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+
+    &::before {
+      @media (min-width: $tablet-width) {
+        @include line-pseudo-100vw($basic_green, 46px, 2px)
+      }
+    }
+  }
+}
+
+.form__item--comments {
+  position: relative;
+  margin-bottom: 23px;
+
+  &::before {
+    @include line-pseudo-50vw($basic_green, 14px, 2px)
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 88px;
+
+    &::before {
+      @media (min-width: $tablet-width) {
+        @include line-pseudo-100vw($basic_green, 23px, 2px)
+      }
+    }
+  }
+}
+
+.form__item--addition {
+  position: relative;
+
+  &::before {
+    @include line-pseudo-50vw($basic_green, 14px, 2px)
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      @media (min-width: $tablet-width) {
+        @include line-pseudo-100vw($basic_green, 23px, 2px)
+      }
+    }
   }
 }
 
@@ -83,19 +141,13 @@
 }
 
 .form__group--contacts {
-  padding-bottom: 24px;
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: 65px;
-  }
-
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 100px;
+    grid-gap: 78px;
   }
 
-  & .form__field {
+  .form__field {
     @media (min-width: $desktop-width) {
       margin: 0;
     }
@@ -118,9 +170,7 @@
 
 .form__title {
   margin: 0;
-  margin-left: -20px;
   margin-bottom: 35px;
-  padding-left: 20px;
   text-transform: none;
   font-size: 24px;
   line-height: 26px;
@@ -128,20 +178,24 @@
   margin-right: 12px;
   background-color: $basic_white;
 
+
   @media (min-width: $tablet-width) {
+    position: relative;
     font-size: 36px;
     line-height: 36px;
+    margin-left: -38px;
     margin-bottom: 76px;
-    padding-left: 39px;
-    margin-left: -39px;
+    padding-left: 38px;
+    padding-right: 38px;
+    width: max-content;
   }
 }
 
 .form__title--contacts {
-  max-width: 210px;
+  max-width: 201px;
 
   @media (min-width: $tablet-width) {
-    max-width: 600px;
+    max-width: none;
   }
 }
 

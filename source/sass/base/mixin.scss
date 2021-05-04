@@ -3,3 +3,37 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin line-pseudo-100vw($color, $top: 0, $height: 1px) {
+  position: absolute;
+  top: $top;
+  height: $height;
+  left: 50%;
+  right: 50%;
+
+  width: 101vw;
+  height: $height;
+  margin-left: -51vw;
+  margin-right: -50vw;
+
+  content: "";
+
+  background-color: $color;
+}
+
+@mixin line-pseudo-50vw($color, $top: 0, $height: 1px) {
+  position: absolute;
+  z-index: -1;
+  top: $top;
+  height: $height;
+  left: 50%;
+  right: 50%;
+
+  width: 50vw;
+  height: $height;
+  margin-right: -50vw;
+
+  content: "";
+
+  background-color: $color;
+}
