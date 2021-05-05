@@ -5,15 +5,38 @@
   text-transform: uppercase;
 
   @media (min-width: $desktop-width) {
-    margin: 0;
     width: 100%;
   }
 
-  &.addition {
-    padding: 23px 0 34px;
+  &--contacts,
+  &--comments {
+    @media (min-width: $desktop-width) {
+      flex-grow: 1;
+    }
+  }
+
+  &--addition {
+    margin-bottom: 34px;
+    position: relative;
+
+    &::before {
+      @include line-pseudo-50vw($basic_green, 14px, 2px);
+    }
 
     @media (min-width: $tablet-width) {
-      padding: 65px 0 35px;
+      &::before {
+        @media (min-width: $tablet-width) {
+          @include line-pseudo-100vw($basic_green, 23px, 2px);
+        }
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-grow: 1;
     }
   }
 
@@ -23,34 +46,89 @@
 }
 
 .form__item--bio {
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 65px;
+    margin-bottom: 72px;
   }
 
   @media (min-width: $desktop-width) {
     width: calc(50% - 40px);
+    margin-bottom: 0;
   }
 }
 
 .form__item--plan {
   padding: 20px 0;
-  margin-bottom: 23px;
-  border-bottom: 1px $special_grey_3 solid;
-  border-top: 1px $special_grey_3 solid;
+  margin: 0;
+  position: relative;
 
   @media (min-width: $tablet-width) {
-    padding: 25px 0;
-    margin-bottom: 71px;
+    padding: 25px 28px;
+    margin: 0 0 71px;
+    border: 1px $special_grey_3 solid;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: auto;
-    margin-bottom: 69px;
-    padding: 38px 0;
+    margin: 0;
+    padding: 23px 28px;
     width: calc(50% - 40px);
     border: 1px $special_grey_3 solid;
+  }
+
+  &::before {
+    @include line-pseudo-100vw($special_grey_3);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    @include line-pseudo-100vw($special_grey_3, 100%);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.form__item--contacts {
+  padding-top: 23px;
+  margin-bottom: 24px;
+  position: relative;
+
+  &::before {
+    @include line-pseudo-50vw($basic_green, 38px, 2px);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+
+    &::before {
+      @media (min-width: $tablet-width) {
+        @include line-pseudo-100vw($basic_green, 46px, 2px);
+      }
+    }
+  }
+}
+
+.form__item--comments {
+  position: relative;
+  margin-bottom: 23px;
+
+  &::before {
+    @include line-pseudo-50vw($basic_green, 14px, 2px);
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 88px;
+
+    &::before {
+      @media (min-width: $tablet-width) {
+        @include line-pseudo-100vw($basic_green, 23px, 2px);
+      }
+    }
   }
 }
 
@@ -59,19 +137,13 @@
 }
 
 .form__group--contacts {
-  padding-bottom: 24px;
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: 65px;
-  }
-
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 100px;
+    grid-gap: 78px;
   }
 
-  & .form__field {
+  .form__field {
     @media (min-width: $desktop-width) {
       margin: 0;
     }
@@ -96,20 +168,47 @@
   margin: 0;
   margin-bottom: 35px;
   text-transform: none;
-  padding-right: 94px;
   font-size: 24px;
   line-height: 26px;
+  order: -1;
+  margin-right: 12px;
+  background-color: $basic_white;
+
 
   @media (min-width: $tablet-width) {
+    position: relative;
     font-size: 36px;
     line-height: 36px;
+    margin-left: -38px;
     margin-bottom: 76px;
+    padding-left: 38px;
+    padding-right: 38px;
+    width: max-content;
+  }
+}
+
+.form__title--contacts {
+  max-width: 201px;
+
+  @media (min-width: $tablet-width) {
+    max-width: none;
+  }
+}
+
+.form__title--comments {
+  max-width: 145px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 255px;
   }
 }
 
 .form__title--addition {
+  max-width: 165px;
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 57px;
+    max-width: 280px;
+    margin-bottom: 59px;
   }
 }
 
@@ -145,7 +244,7 @@
     font-size: 16px;
     display: inline-block;
     width: 50%;
-    margin-bottom: 93px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -166,6 +265,5 @@
 
   @media (min-width: $desktop-width) {
     width: 568px;
-    margin-bottom: 82px;
   }
 }

@@ -1,4 +1,8 @@
 .page-main {
+  @media (min-width: $tablet-width) {
+    overflow-x: hidden;
+  }
+
   @media (min-width: $desktop-width) {
     &__banner {
       margin-bottom: 82px;
