@@ -1,17 +1,26 @@
 .catalog {
   &__item {
-    border-top: 1px solid $basic_grey_3;
+    position: relative;
 
     @media (min-width: $tablet-width) {
-      border: none;
       background-color: $basic_grey;
     }
 
-    &:last-child {
-      border-bottom: 1px solid $basic_grey_3;
+    &::before {
+      @include line-pseudo-100vw($special_grey_3);
 
       @media (min-width: $tablet-width) {
-        border: 2px solid $basic_grey;
+        display: none;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        @include line-pseudo-100vw($special_grey, 100%, $height: 1px);
+
+        @media (min-width: $tablet-width) {
+          display: none;
+        }
       }
     }
   }

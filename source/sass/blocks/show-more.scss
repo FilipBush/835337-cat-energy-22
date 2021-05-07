@@ -7,6 +7,7 @@
   @media (min-width: $tablet-width) {
     padding: 52px 0 38px;
     background: none;
+    border: 2px solid $basic_grey;
   }
 
   &__button {
@@ -21,6 +22,10 @@
       background-color: $basic-grey;
       color: $basic-black;
       font-size: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 169px;
     }
   }
 
