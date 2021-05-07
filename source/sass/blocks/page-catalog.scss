@@ -1,5 +1,6 @@
 .page-catalog {
-  padding-top: 25px;
+  overflow-x: hidden;
+  padding-top: 27px;
 
   @media (min-width: $tablet-width) {
     padding-top: 64px;

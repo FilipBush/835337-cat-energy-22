@@ -13,6 +13,30 @@
     background-color: $basic_green;
     padding: 11px 35px;
 
+    &:hover {
+      background-color: $basic_green_2;
+    }
+
+    &:active {
+      color: $basic_white03;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 17px 25px;
+    }
+  }
+
+  &--secondary {
+    background-color: $basic_grey;
+
+    &:hover {
+      background-color: $basic_grey_2;
+    }
+
+    &:active {
+      color: $special_dark_grey03;
+    }
+
     @media (min-width: $tablet-width) {
       padding: 17px 25px;
     }
