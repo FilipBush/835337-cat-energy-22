@@ -1,7 +1,13 @@
 .banner {
-  background-image: url("../img/promo_background.jpg");
+  background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+
 
   @media (min-width: $tablet-width) {
     background-image: none;
@@ -73,7 +79,7 @@
 .banner__image {
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 190px;
+    top: 199px;
     left: 50%;
     transform: translateX(-50%);
     bottom: -50px;
@@ -83,6 +89,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    z-index: 1;
+    top: -78px;
+    left: 58%;
     bottom: 500px;
   }
 }

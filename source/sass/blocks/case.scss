@@ -1,7 +1,7 @@
 .case {
   background-color: $basic-grey_5;
   padding-top: 27px;
-  padding-bottom: 27px;
+  padding-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     padding-top: 55px;
@@ -14,7 +14,7 @@
   }
 }
 
-.case__demo {
+.case__wrapper {
   @media (min-width: $tablet-width) {
     text-align: center;
     width: 100%;
@@ -23,6 +23,99 @@
   @media (min-width: $desktop-width) {
     grid-column: 2 / 3;
     grid-row: 1 / 5;
+  }
+}
+
+.case__demo {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    height: 540px;
+    margin: 0 auto;
+  }
+}
+
+.case__before {
+  z-index: 1;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  width: 280px;
+  height: 240px;
+  background-image: url("../img/before-mobile@1x.png");
+  background-size: 320px;
+  background-repeat: no-repeat;
+  left: -20px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/before-tablet@1x.png");
+    width: 708px;
+    height: 540px;
+    background-size: 354px;
+    left: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/before-desktop@1x.png");
+    background-size: 405px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/before-desktop@2x.png");
+    }
+  }
+}
+
+.case__after {
+  list-style: none;
+  position: absolute;
+  top: 8px;
+  width: 280px;
+  height: 240px;
+  background-image: url("../img/after-mobile@1x.png");
+  background-size: 320px;
+  background-repeat: no-repeat;
+  left: -25px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/after-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    background-image: url("../img/after-tablet@1x.png");
+    width: 708px;
+    height: 540px;
+    background-size: 354px;
+    top: 5px;
+    left: 50%;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/after-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/after-desktop@1x.png");
+    background-size: 325px;
+    left: 365px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/after-desktop@2x.png");
+    }
   }
 }
 

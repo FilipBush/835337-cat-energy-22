@@ -241,7 +241,7 @@
 
     @media (min-width: $desktop-width) {
       display: grid;
-      grid-template-columns: 896px 245px;
+      grid-template-columns: 1fr 245px;
       column-gap: 79px;
       margin-bottom: 86px;
     }
