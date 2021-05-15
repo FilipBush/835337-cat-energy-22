@@ -16,8 +16,18 @@
     padding: 0;
 
     @media (min-width: $tablet-width) {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      width: 324px;
+      height: 210px;
       position: absolute;
-      top: -50px;
+      top: -70px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 245px;
+      height: 210px;
     }
   }
 
