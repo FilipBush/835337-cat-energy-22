@@ -138,12 +138,21 @@
   text-transform: uppercase;
   margin: 0;
   width: 122px;
-  padding-right: 25px;
+  padding-right: 34px;
   display: inline-flex;
   background-image: url("../img/icon-right-arrow-long.svg");
   background-position: center right;
   background-repeat: no-repeat;
-  background-size: 25px 10px;
+  background-size: 32px 10px;
+
+  &:hover {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    background-position: center right;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
 
   @media (min-width: $tablet-width) {
     width: 158px;

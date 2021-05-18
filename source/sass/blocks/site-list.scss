@@ -1,6 +1,14 @@
 .site-list {
   &__link {
     color: $basic_black;
+
+    &:hover {
+      opacity: 60%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
   }
 
   &--white .site-list__link {

@@ -32,6 +32,7 @@
   background-color: $basic-green;
 
   @media (min-width: $tablet-width) {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
     margin: 0;
     height: 34px;
     width: 34px;
@@ -51,6 +52,15 @@
       background-color: $basic_green;
     }
   }
+
+  &:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.19);
+  }
+
+  &:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border: 1px solid $basic_green;
+  }
 }
 
 .controls__button {
@@ -59,7 +69,17 @@
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
     border-bottom: 1px dotted $special_grey;
+
+    &:hover {
+      border-bottom: 1px solid $special_grey;
+    }
+
+    &:active {
+      border-bottom: 1px solid transparent;
+    }
   }
 }
 

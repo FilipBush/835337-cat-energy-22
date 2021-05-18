@@ -22,20 +22,26 @@
   display: block;
   width: 100%;
   text-align: center;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
     width: auto;
-    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
   }
 }
 
 .page-footer__social {
   position: relative;
-  padding-top: 20px;
-  padding-left: 73px;
-  padding-right: 77px;
-  padding-bottom: 21px;
+  display: flex;
+  padding: 14px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0;
