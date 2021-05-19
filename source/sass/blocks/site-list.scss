@@ -1,6 +1,14 @@
 .site-list {
   &__link {
     color: $basic_black;
+
+    &:hover {
+      opacity: 60%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
   }
 
   &--white .site-list__link {
@@ -18,7 +26,6 @@
 
 .site-list__item {
   position: relative;
-  //border-bottom: 1px $basic_grey_3 solid;
   margin: 0;
   padding: 23px 20px;
   text-align: center;

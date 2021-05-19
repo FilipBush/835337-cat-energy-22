@@ -34,6 +34,10 @@
     &:hover {
       outline: 1px solid $special_grey;
       outline-offset: -1px;
+
+      & + svg {
+        color: $basic_green;
+      }
     }
 
     &:focus {
@@ -44,6 +48,10 @@
     :invalid {
       outline: 2px solid $status_error;
       outline-offset: -2px;
+
+      & + svg {
+        color: $status_error;
+      }
     }
 
     @media (min-width: $tablet-width) {

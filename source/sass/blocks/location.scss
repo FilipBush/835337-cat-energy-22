@@ -33,6 +33,7 @@
 }
 
 .location__invite {
+  color: $basic_black2;
   width: 140px;
   text-transform: uppercase;
   font-size: 16px;
@@ -44,6 +45,7 @@
 }
 
 .location__address {
+  color: $special_dark_grey;
   width: 140px;
   line-height: 20px;
   font-family: $custom-font;
