@@ -50,39 +50,51 @@
   font-weight: 400;
   font-style: normal;
   margin: 0;
-  margin-bottom: 25px;
-  padding-top: 27px;
+  margin-bottom: 23px;
+  padding-top: 28px;
 
   @media (min-width: $tablet-width) {
-    max-width: 414px;
+    max-width: 420px;
     font-size: 60px;
     line-height: 60px;
     margin-bottom: 41px;
     padding-top: 0;
+    padding-left: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
   }
 }
 
 .banner__slogan {
   display: inline-flex;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 28px;
   z-index: 1;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 14px;
 
   @media (min-width: $tablet-width) {
-    padding-right: 300px;
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 6px;
     margin-bottom: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    margin-bottom: 51px;
   }
 }
 
 .banner__image {
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: 199px;
+    top: 201px;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -50px;
     margin: 0 auto;
     max-width: 100%;
     height: auto;
@@ -90,7 +102,7 @@
 
   @media (min-width: $desktop-width) {
     z-index: 1;
-    top: -78px;
+    top: -82px;
     left: 58%;
     bottom: 500px;
   }

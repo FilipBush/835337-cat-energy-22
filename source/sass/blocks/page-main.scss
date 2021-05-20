@@ -9,12 +9,23 @@
     }
   }
 
-  &__programs,
-  &__features {
-    margin-bottom: 22px;
+  &__programs {
+    margin-bottom: 28px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 45px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 72px;
+    }
+  }
+
+  &__features {
+    margin-bottom: 42px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 51px;
     }
   }
 }
@@ -24,10 +35,10 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
-    padding: 70px 0 526px;
+    padding: 60px 0 526px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 114px 0 267px;
+    padding: 109px 0 267px;
   }
 }
