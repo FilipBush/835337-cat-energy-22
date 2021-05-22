@@ -83,3 +83,13 @@
     }
   }
 }
+
+.page-header--nojs {
+  .page-header__nav {
+    display: block;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}

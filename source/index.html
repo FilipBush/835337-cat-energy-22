@@ -5,6 +5,10 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link rel="icon" href="img/favicon-32.ico">
     <link rel="icon" href="img/favicon-32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon-180.png" type="image/svg+xml">
@@ -12,7 +16,7 @@
   </head>
   <body class="page__body page__body--main">
 
-      <header class="page-header page-header--index">
+      <header class="page-header page-header--index page-header--nojs">
           <a class="page-header__logo" href="index.html">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
@@ -20,8 +24,8 @@
               <img class="page-header__mascot" src="img/logo-mobile.svg" width="191" height="38" alt="маскот CAT ENERGY">
             </picture>
           </a>
-        <nav class="main-navigation main-navigation--opened">
-          <button type="button" class="button main-navigation__toggle">
+        <nav class="page-header__nav main-navigation main-navigation--opened">
+          <button type="button" class="button page-header__toggle main-navigation__toggle">
             <span class="visually-hidden">
               Открыть/закрыть меню
             </span>
@@ -57,7 +61,7 @@
             </span>
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, iimg/index-can-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
 
               <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
@@ -123,31 +127,33 @@
 
         <section class="case">
           <div class="case__container container">
-            <h2 class=case__title>Живой пример</h2>
-            <p class="case__desc">
-              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.
-            </p>
-            <div class="case__result result">
-              <dl class="result__list">
-                <dt class="result__item">
-                  5 кг
-                </dt>
-                <dd class="result__desc">
-                  снижение веса
-                </dd>
-              </dl>
-              <dl class="result__list">
-                <dt class="result__item">
-                  60 дней
-                </dt>
-                <dd class="result__desc">
-                  затрачено времени
-                </dd>
-              </dl>
-            </div>
-            <div class="case__cost">
-              <span class="case__cost-title">Затраты на питание:</span>
-              <span>15 000 РУБ.</span>
+            <div class="case__info">
+              <h2 class=case__title>Живой пример</h2>
+              <p class="case__desc">
+                Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по&#8209;прежнему спит по 16 часов в день.
+              </p>
+              <div class="case__result result">
+                <dl class="result__list">
+                  <dt class="result__item">
+                    5 кг
+                  </dt>
+                  <dd class="result__desc">
+                    снижение веса
+                  </dd>
+                </dl>
+                <dl class="result__list">
+                  <dt class="result__item">
+                    60 дней
+                  </dt>
+                  <dd class="result__desc">
+                    затрачено времени
+                  </dd>
+                </dl>
+              </div>
+              <div class="case__cost">
+                <span class="case__cost-title">Затраты на питание:</span>
+                <span>15 000 РУБ.</span>
+              </div>
             </div>
             <div class="case__wrapper">
               <ul class="case__demo">

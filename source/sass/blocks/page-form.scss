@@ -29,13 +29,14 @@
   line-height: 36px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 65px;
+    padding-top: 61px;
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 54px;
+    margin-bottom: 55px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
+    padding-top: 74px;
     margin-bottom: 56px;
   }
 }
@@ -51,7 +52,7 @@
     max-width: 380px;
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 66px;
+    margin-bottom: 61px;
   }
 
   @media (min-width: $desktop-width) {

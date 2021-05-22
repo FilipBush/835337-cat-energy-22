@@ -1,6 +1,10 @@
 .location {
   position: relative;
   background-color: $basic-white;
+
+  &--grey {
+    background-color: $basic_grey;
+  }
 }
 
 .location__wrapper {
@@ -18,18 +22,18 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 65px;
+    padding-top: 63px;
     padding-bottom: 58px;
     padding-left: 71px;
     padding-right: 72px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 35%;
+    max-width: 570px;
     position: absolute;
     top: 95px;
     left: 110px;
-    padding: 66px 76px;
+    padding: 64px 76px 57px;
     background-color: $basic-white;
   }
 }
@@ -43,7 +47,7 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 25px;
+    line-height: 26px;
   }
 }
 
@@ -58,6 +62,11 @@
     width: 160px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-right: 8px;
   }
 }
 
