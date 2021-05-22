@@ -38,7 +38,6 @@
 
 @mixin line-pseudo-88vw($color, $top: 0, $height: 1px) {
   position: absolute;
-  z-index: -1;
   top: $top;
   height: $height;
   left: 50%;

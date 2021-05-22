@@ -1,14 +1,13 @@
 .spec {
-  margin-bottom: 22px;
-
   @media (min-width: $tablet-width) {
     margin-bottom: 33px;
+    padding: 0 2px;
   }
 
   &__element {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 6px;
+    margin-bottom: 0;
     font-size: 12px;
     line-height: 16px;
 
@@ -36,9 +35,19 @@
 
   &__title,
   &__value {
-    margin: 0;
     font-family: $custom-font;
-
     color: $special_dark_grey;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__value {
+    margin: 0;
+
+    @media (min-width: $desktop-width) {
+      margin-right: -4px;
+    }
   }
 }

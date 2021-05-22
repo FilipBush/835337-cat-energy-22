@@ -20,7 +20,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 85px 60px;
+    gap: 82px 60px;
   }
 
   @media (min-width: $desktop-width) {
@@ -59,7 +59,7 @@
 
     @media (min-width: $tablet-width) {
       margin-right: 0;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
       width: 80px;
       height: 80px;
     }
@@ -110,13 +110,9 @@
       font-size: 280px;
       color: $basic_grey;
       z-index: -1;
-      top: 90px;
-      left: 50%;
+      top: 91px;
+      left: 177px;
       transform: translateX(-50%);
-    }
-
-    @media (min-width: $desktop-width) {
-      transform: translateX(-4px);
     }
   }
 }
@@ -127,8 +123,10 @@
   font-family: $custom-font;
   font-size: 14px;
   line-height: 18px;
+  padding-top: 2px;
 
   @media (min-width: $tablet-width) {
+    padding: 0;
     max-width: 245px;
     font-size: 16px;
     line-height: 24px;

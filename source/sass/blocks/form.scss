@@ -16,7 +16,7 @@
   }
 
   &--addition {
-    margin-bottom: 34px;
+    margin-bottom: 35px;
     position: relative;
 
     &::before {
@@ -26,17 +26,18 @@
     @media (min-width: $tablet-width) {
       &::before {
         @media (min-width: $tablet-width) {
-          @include line-pseudo-100vw($basic_green, 23px, 2px);
+          @include line-pseudo-100vw($basic_green, 22px, 2px);
         }
       }
     }
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 35px;
+      margin-bottom: 54px;
     }
 
     @media (min-width: $desktop-width) {
       flex-grow: 1;
+      margin-bottom: 61px;
     }
   }
 
@@ -46,9 +47,10 @@
 }
 
 .form__item--bio {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 4px;
     margin-bottom: 72px;
   }
 
@@ -59,19 +61,19 @@
 }
 
 .form__item--plan {
-  padding: 20px 0;
+  padding: 23px 0 18px;
   margin: 0;
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding: 25px 28px;
-    margin: 0 0 71px;
+    padding: 29px 28px 29px 27px;
+    margin: 0 0 48px;
     border: 1px $special_grey_3 solid;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
-    padding: 23px 28px;
+    padding: 28px 28px 24px;
     width: calc(50% - 40px);
     border: 1px $special_grey_3 solid;
   }
@@ -94,21 +96,28 @@
 }
 
 .form__item--contacts {
-  padding-top: 23px;
+  padding-top: 27px;
   margin-bottom: 24px;
   position: relative;
 
   &::before {
-    @include line-pseudo-50vw($basic_green, 38px, 2px);
+    @include line-pseudo-50vw($basic_green, 43px, 2px);
   }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 65px;
 
     &::before {
-      @media (min-width: $tablet-width) {
-        @include line-pseudo-100vw($basic_green, 46px, 2px);
-      }
+      @include line-pseudo-100vw($basic_green, 49px, 2px);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 69px;
+    margin-bottom: 67px;
+
+    &::before {
+      @include line-pseudo-100vw($basic_green, 91px, 2px);
     }
   }
 }
@@ -118,17 +127,21 @@
   margin-bottom: 23px;
 
   &::before {
-    @include line-pseudo-50vw($basic_green, 14px, 2px);
+    @include line-pseudo-50vw($basic_green, 15px, 2px);
   }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 88px;
+    margin-bottom: 65px;
 
     &::before {
       @media (min-width: $tablet-width) {
         @include line-pseudo-100vw($basic_green, 23px, 2px);
       }
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 67px;
   }
 }
 
@@ -154,13 +167,14 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 40px;
+    column-gap: 55px;
     row-gap: 32px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
   }
 }
 
@@ -197,23 +211,28 @@
 
 .form__title--comments {
   max-width: 145px;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
     max-width: 255px;
+    margin-bottom: 76px;
   }
 }
 
 .form__title--addition {
   max-width: 165px;
+  margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
-    max-width: 280px;
-    margin-bottom: 59px;
+    max-width: 290px;
+    margin-bottom: 57px;
+    padding-left: 37px;
+    padding-right: 41px;
   }
 }
 
 .form__field {
-  margin-bottom: 13px;
+  margin-bottom: 14px;
   color: $special_dark_grey;
 
   @media (min-width: $tablet-width) {
@@ -225,9 +244,13 @@
   }
 }
 
+.form__field--checkbox {
+  margin-bottom: 12px;
+}
+
 .form__field.checkbox {
   @media (min-width: $tablet-width) {
-    margin: 0;
+    margin: 0 0 0 -1px;
   }
 }
 
@@ -241,6 +264,7 @@
   margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
+    transform: translate(-11px, -6px);
     font-size: 16px;
     display: inline-block;
     width: 50%;
@@ -248,6 +272,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    transform: translate(-41px, -3px);
     margin-bottom: 0;
     text-align: left;
     padding-left: 81px;
@@ -257,8 +282,12 @@
 .form__button {
   width: 100%;
   line-height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 16px;
+    padding-bottom: 16px;
     display: inline-block;
     width: 282px;
   }

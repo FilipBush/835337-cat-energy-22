@@ -20,7 +20,7 @@
   }
 
   &__item {
-    padding: 15px 10px 15px;
+    padding: 13px 10px 17px;
     text-align: center;
     text-transform: uppercase;
     font-size: 24px;
@@ -29,7 +29,7 @@
     border-radius: 5px;
 
     @media (min-width: $tablet-width) {
-      padding: 15px 10px 20px;
+      padding: 14px 10px 19px;
       font-size: 30px;
       line-height: 37px;
     }
@@ -43,17 +43,19 @@
     background-color: $basic-grey_5;
     text-align: center;
     width: 87px;
-    padding: 0 15px;
-    margin: -10px auto 0;
+    padding: 0 15px 0 13px;
+    margin: -9px auto 0;
 
     @media (min-width: $tablet-width) {
-      margin-top: -8px;
+      font-size: 14px;
+      line-height: 14px;
+      padding: 0 8px 0 8px;
       width: max-content;
       background-color: $basic_white;
     }
 
     @media (min-width: $desktop-width) {
-      background-color: $basic-grey_5;
+      background-color: $basic-grey;
     }
   }
 }

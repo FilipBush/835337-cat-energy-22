@@ -1,8 +1,18 @@
 .controls {
   display: flex;
   align-items: center;
-  padding: 20px 30px 0;
+  padding: 24px 39px 0 44px;
   background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    padding: 47px 69px 0 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 47px 0 0 0;
+    margin-left: auto;
+    max-width: 569px;
+  }
 }
 
 .controls__scale {
@@ -10,7 +20,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 19px;
+  margin: 0 18px;
   height: 14px;
   background-color: $basic-white;
   border-radius: 6px;
@@ -21,13 +31,14 @@
     border: none;
     background-color: $special_grey_4;
     justify-content: center;
+    margin: 0 22px;
   }
 }
 
 .controls__thumb {
-  margin: 0 6px;
+  margin: 0 5px;
   height: 6px;
-  width: 36px;
+  width: 35px;
   border-radius: 6px;
   background-color: $basic-green;
 

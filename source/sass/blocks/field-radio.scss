@@ -1,3 +1,15 @@
+.field-radio {
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 13px;
+  }
+}
+
 .field-radio__control {
   position: absolute;
   appearance: none;
@@ -21,7 +33,7 @@
     border: 1px solid $special_grey;
     border-radius: 50%;
 
-    @media (min-width: $desktop-width) {
+    @media (min-width: $tablet-width) {
       width: 40px;
       height: 40px;
     }
@@ -44,8 +56,10 @@
     background-color: $basic_green;
     border-radius: 50%;
 
-    @media (min-width: $desktop-width) {
-      left: 13px;
+    @media (min-width: $tablet-width) {
+      left: 11px;
+      width: 18px;
+      height: 18px;
     }
   }
 }
@@ -55,9 +69,9 @@
 }
 
 .field-radio__title {
-  padding-left: 40px;
+  padding-left: 45px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     padding-left: 60px;
   }
 }
