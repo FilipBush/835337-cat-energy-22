@@ -64,6 +64,10 @@
   }
 }
 
+.field-radio__control:focus + .field-radio__label::before {
+  border: 1px solid $basic_green;
+}
+
 .field-radio__control:disabled + .field-radio__label {
   opacity: 30%;
 }

@@ -5,14 +5,12 @@
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style.min.css" rel="stylesheet">
-    <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
-    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
-    <link rel="preload" href="fonts/oswaldregular.woff" as="font">
-    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
-    <link rel="icon" href="img/favicon-32.ico">
-    <link rel="icon" href="img/favicon-32.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/favicon-180.png" type="image/svg+xml">
-    <link rel="webmanifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+    <link rel="icon" href="img/favicon-32.ico">
+    <link rel="icon" href="img/favicon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon-180.png" type="image/svg+xml">
+    <link rel="webmanifest" href="manifest.webmanifest">
   </head>
   <body class="page__body page__body--main">
 
@@ -25,7 +23,7 @@
             </picture>
           </a>
         <nav class="page-header__nav main-navigation main-navigation--opened">
-          <button type="button" class="button page-header__toggle main-navigation__toggle">
+          <button type="button" class="button page-header__toggle main-navigation__toggle" aria-label="открыть-закрыть меню">
             <span class="visually-hidden">
               Открыть/закрыть меню
             </span>
@@ -68,7 +66,7 @@
               <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
               <img class="banner__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Продукт Cat Energy">
             </picture>
-            <a class="banner__button button button--primary" href="form.html">
+            <a class="banner__button button button--primary" href="form.html" aria-label="Подобрать программу">
               Подобрать программу
             </a>
           </div>
@@ -119,7 +117,7 @@
             </li>
             <li class="features__item features__item--time">
               <p class="features__desc">
-                Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbspпитомца!
+                Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
               </p>
             </li>
           </ol>
@@ -161,17 +159,20 @@
                 <li class="case__after"></li>
               </ul>
               <div class="case__controls controls">
-                <button type="button" class="button controls__button controls__button--before">было</button>
+                <button type="button" class="button controls__button controls__button--before" aria-label="Пример до">было</button>
                 <div class="controls__scale">
                   <div class="controls__thumb"></div>
                 </div>
-                <button type="button" class="button controls__button controls__button--after">стало</button>
+                <button type="button" class="button controls__button controls__button--after" aria-label="Пример после">стало</button>
               </div>
             </div>
           </div>
         </section>
 
         <section class="location">
+          <h2 class="visually-hidden">
+            Адрес
+          </h2>
           <div class="location__wrapper container">
             <span class="location__invite">
               приглашаем к&nbsp;сотрудничеству дилеров!
@@ -181,8 +182,9 @@
               <span class="location__city">Санкт-Петербург</span>
             </div>
           </div>
-            <div class="map">
-            </div>
+          <div class="location__map map">
+            <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003151!2d30.320858716211177!3d59.938719169054096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1621687590951!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
         </section>
       </main>
 
