@@ -27,4 +27,10 @@
       background-image: url("../img/location-desktop@2x.png");
     }
   }
+
+  &__iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
 }

@@ -11,6 +11,16 @@
     margin-bottom: 0;
   }
 
+  &__image {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 12px;
+    }
+  }
+
   &__page {
     padding: 0;
     height: 145px;

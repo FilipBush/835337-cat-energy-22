@@ -38,6 +38,12 @@
   border: 1px solid $special_grey_5;
 }
 
+// checkbox focus:
+
+.checkbox__input:focus + .checkbox__label::before {
+  border: 1px solid $basic_green;
+}
+
 // checkbox disabled:
 
 .checkbox__input:disabled + .checkbox__label {
