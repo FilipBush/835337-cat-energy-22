@@ -7,7 +7,7 @@
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
-    <link rel="icon" href="img/favicon-32.ico">
+    <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon-32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon-180.png" type="image/svg+xml">
     <link rel="webmanifest" href="manifest.webmanifest">
@@ -69,7 +69,7 @@
                 <label class="field-text__label field-text__label--cat-weight" for="cat-weight">Вес&nbsp;(кг):*</label>
                 <input class="field-text__input" type="text" name="cat-weight" id="cat-weight" placeholder="7">
               </li>
-              <li class="form__field field-text field-text__label--catage">
+              <li class="form__field field-text">
                 <label class="field-text__label" for="cat-age">Возраст&nbsp;(лет):</label>
                 <input class="field-text__input field-text__input--cat-age" type="text" name="cat-age" id="cat-age" placeholder="7">
               </li>
@@ -82,19 +82,19 @@
             </legend>
             <ul class="form__group form__group--radio">
               <li class="form__field field-radio">
-                <input class="field-radio__control" type="radio" id="slim" value="slim" name="slim" checked>
+                <input class="field-radio__control" type="radio" id="slim" value="slim" name="plan" checked>
                 <label class="field-radio__label" for="slim">
                   <span class="field-radio__title">Похудение</span>
                 </label>
               </li>
               <li class="form__field field-radio">
-                <input class="field-radio__control" type="radio" id="gain" value="gain" name="gain">
+                <input class="field-radio__control" type="radio" id="gain" value="gain" name="plan">
                 <label class="field-radio__label" for="gain">
                   <span class="field-radio__title">Набор массы</span>
                 </label>
               </li>
               <li class="form__field field-radio">
-                <input class="field-radio__control" type="radio" id="advice" value="advice" name="advice">
+                <input class="field-radio__control" type="radio" id="advice" value="advice" name="plan">
                 <label class="field-radio__label" for="advice">
                   <span class="field-radio__title"></span>Не знаю (Нужен ваш совет)
                 </label>
